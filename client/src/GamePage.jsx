@@ -28,14 +28,9 @@ const GamePage = ({ socket, username }) => {
 
     const checkForEqual = () => {
         let isEqual = true;
-        // buttonsState.forEach((btn) => {
-        //     if (btn.player === "-") {
-        //         isEqual = false;
-        //         return;
-        //     }
-        // });
-        for(let i = 0 ; i < buttonsState.length ; i ++){
-            if (buttonsState[i].player === "-") {
+        
+        for(let btn of buttonsState){
+            if (btn.player === "-") {
                         isEqual = false;
                         break;
                     }
